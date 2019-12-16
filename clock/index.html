@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <h1>Hello World</h1>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="index.css"> 
+    </head>
+    <body>
+        <div class="clock-svg">
+            <svg viewbox="0 0 400 400">
+                <circle cx=200 cy=200 r=190 style="fill: white; stroke:black; stroke-width:3"></circle>
+                <g class="marks">
+                    <line x1="185" y1="0" x2="180" y2="0" />
+                    <line x1="185" y1="0" x2="180" y2="0" />
+                    <line x1="185" y1="0" x2="180" y2="0" />
+                    <line x1="185" y1="0" x2="180" y2="0" />
+                    <line x1="185" y1="0" x2="180" y2="0" />
+                    <line x1="185" y1="0" x2="180" y2="0" />
+                    <line x1="185" y1="0" x2="180" y2="0" />
+                    <line x1="185" y1="0" x2="180" y2="0" />
+                    <line x1="185" y1="0" x2="180" y2="0" />
+                    <line x1="185" y1="0" x2="180" y2="0" />
+                    <line x1="185" y1="0" x2="180" y2="0" />
+                    <line x1="185" y1="0" x2="180" y2="0" />
+                </g>
+                <line x1="0" y1="0" x2="140" y2="0" class="hour" id="hourarm"/>
+                <line x1="0" y1="0" x2="160" y2="0" class="minute" id="minutearm"/>
+                <line x1="0" y1="0" x2="180" y2="0" class="seconds" id="secondarm"/>
+                <circle cx="200" cy="200" r="5" class="pin" />
+            </svg>
+        </div>
+        <script type="text/javascript" src="./index.js"></script>
+    </body>
+</html>
