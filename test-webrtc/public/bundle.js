@@ -17,5 +17,6 @@ createOffer => {
     .then(offer=>{
         return Connection.setLocalDescription(offer)
     })
+    .then(onInint)
 }
 },{}]},{},[1]);
