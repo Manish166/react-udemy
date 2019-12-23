@@ -1,0 +1,46 @@
+.header{
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: darkblue;
+    color: white;
+    margin: auto;
+}
+.description{
+    height: 150px;
+    padding: 0 20% 0 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: green;
+    color: white;
+    margin: auto;
+}  
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin:40px 40px 0 40px
+}
+.origintext{
+    width: 50%;
+    height: 40px;
+    background-color: beige;
+    margin: 20px;
+}
+.edittext{
+    width: 50%;
+    margin: 20px;
+    height: 100px;
+    color: black;
+}
+.timer{
+    margin: 20px;
+    float: left;
+}
+.start-button{
+    margin: 20px;
+    float: right;
+}

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+    <link rel="stylesheet" href="index.css">
+    <title>Typing speed test</title>
+</html>
+<head>
+    <header class="header" id="header">
+        <h1>Test Your Typing Speed</h1>
+    </header>
+    <description class="description" id="description">
+        <p>This is a typing test. Your goal is to duplicate the provided text, EXACTLY, in the field below. The timer starts when you start typing, and only stops when you match this text exactly. Good Luck!</p>
+    </description>
+    <main class="main">
+        <input id="origintext" 
+            class="origintext" 
+            type="text" 
+            readonly 
+            placeholder="The is the text to type below"></input>
+        <textarea id="edittext" 
+            type="text"
+            rows=10
+            defaultValue="Type here" 
+            class="edittext" 
+            placeholder="The clock starts when you start typing">
+        </textarea>
+        <span>
+            <timer id="timer" class="timer">TImer</timer>
+            <p id="count" class="count"></p>
+            <button id="start-button" class="start-button">Start Over</button>
+        </span>
+    </main>
+    <script type="text/javascript" src="index.js"></script>
+    
+</head>
+<body>
+
+</body>
