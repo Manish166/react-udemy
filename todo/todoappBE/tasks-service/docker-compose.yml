@@ -1,0 +1,20 @@
+version : '3'
+services:
+    tasks-service:
+        build: ./tasks-service
+        environment: 
+            - DB_URI=mysql://root:password@tasks-services-db/db?charset=UTF8
+        depends_on :
+            - tasks-services-db
+        ports:
+            - 0.0.0.0:8081:8080
+        volumes: 
+            - ./tasks-service:/app
+    tasks-services-db:
+        image: mysql:5.7.20
+        environment:
+            - MYSQL_ROOT_PASSWORD=password
+            - MYSQL_DATABASE=db
+        restart: always
+        ports:
+            - 0.0.0.0:3308:3306

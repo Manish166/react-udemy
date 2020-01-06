@@ -1,0 +1,9 @@
+.quotebox{
+    margin: 40px;
+    border: 5px dotted pink;
+}
+
+.quotebox_content {
+    font-size: 15px;
+    text-align: center;
+  }
