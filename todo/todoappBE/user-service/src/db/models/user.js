@@ -1,5 +1,5 @@
 import {Model, DataTypes} from 'sequelize'
-import connection from '../connection'
+import sequelize from '../connection'
 
 export class User extends Model{}
     User.init(
@@ -33,6 +33,6 @@ export class User extends Model{}
                 exclude : ["passwordHash"]
             }
         },
-    modelName : "users",
+    modelName : "user",
     sequelize
 })

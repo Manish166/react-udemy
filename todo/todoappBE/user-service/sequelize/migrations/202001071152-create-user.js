@@ -27,7 +27,7 @@ module.exports.up=(queryInterface, DataTypes)=>{
             allowNull: false,
             type: DataTypes.DATE
         },
-        updatesAt:{
+        updatedAt:{
             allowNull: false,
             type: DataTypes.DATE
         },
