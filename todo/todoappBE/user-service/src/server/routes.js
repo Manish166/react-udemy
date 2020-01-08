@@ -1,6 +1,7 @@
 import {User} from "../db/models/user"
-import uuid from '../helpers/generateUUID'
+import generateUUID from '../helpers/generateUUID'
 import getHash from "../helpers/hashPassword"
+
 const setUpRoutes = app =>{
     app.get("/users", async(req, res, next) => {
         const users=await User.findAll();
@@ -8,23 +9,18 @@ const setUpRoutes = app =>{
     })
 
     app.post("/users", async (req, res, next) => {
-        if (!req.body.firstName || !req.body.lastName || !req.body.email || !req.body.passwordHash){
+        if (!req.body.firstName || !req.body.lastName || !req.body.email || !req.body.password){
             return next(new Error("invalid body"))
         };
-        const hash = getHash(req.body.passwordHash);
         try {
-            const newUser = await User.create({
-                id : uuid,
+            const newUser = await User.create({ 
+                id : generateUUID(),
                 firstName : req.body.firstName,
                 lastName : req.body.lastName,
                 email : req.body.email,
-                passwordHash : hash
-
+                passwordHash : await getHash(req.body.password)
             })
             return res.status(201).send(newUser)
-            // .then((user)=>{
-            //     res.status(201).send(user)
-            // })
         }
         catch(e) {
             console.log(error);

@@ -8,6 +8,7 @@ services:
             - DB_URI=mysql://root:password@user-service-db/db?charset=UTF8
         volumes: 
             - ./user-service:/app
+            - node_modules:/app/node_modules
         ports: 
             - 0.0.0.0:8080:8080
 
@@ -19,4 +20,5 @@ services:
         image: mysql:5.7.20
         ports: 
             - 0.0.0.0:3307:3306
-
+volumes:
+    node_modules:
